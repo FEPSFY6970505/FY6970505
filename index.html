@@ -1,139 +1,149 @@
 <!DOCTYPE html>
 <html>
- <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-     <!style for tables>
- <style>
-  .mySlides {display:none}
-   
-   body {
-    background-color: #FFFFFF;
-    margin-left: 50px;
-   }
 
-   table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 30%
-   }
-  
-   td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-   }
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!style for tables>
+    <style>
+      .mySlides {
+        display: none
+      }
 
-   tr:nth-child(even) {
-    background-color: #dddddd;
-   }
-  
-   p.ex1 {
-  margin-left:250px;
-   }
+      body {
+        background-color: #FFFFFF;
+        margin-left: 50px;
+      }
 
-  </style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 30%
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+
+      p.ex1 {
+        margin-left: 250px;
+      }
+    </style>
 </head>
-  <body>
-    <img src="Banner.png" alt="Banner" width="1200" height="300">
-    <h1>ENG0018 Computer Laboratory 2026/27</h1>
-    <h2>Student URN: 6970505</h2>
 
-    <!-- table of contents-->
-     <table>
-      <tr>
-        <th><h3>Table of Contents</h3></th>
-      </tr>
-      <tr>
-        <td><a href="#Abstract">Abstract</a></td>
-      </tr>
-      <tr>
-        <td><a href="#Introduction">Introduction</a></td>
-      </tr>
-      <tr>
-        <td><a href="#Analysis and Discussion">Analysis and Discussion</a></td>
-      </tr>
-      <tr>
-        <td><a href="#References">Conclusion</a></td>
-      </tr>
-     </table>
-    <hr>
+<body>
+  <img src="Banner.png" alt="Banner" width="1200" height="300">
+  <h1>ENG0018 Computer Laboratory 2026/27</h1>
+  <h2>Student URN: 6970505</h2>
 
-    <h2 style= "font-family:calibri;"><b>Conference paper: Name of project</b></h2>
+  <!-- table of contents-->
+  <table>
+    <tr>
+      <th>
+        <h3>Table of Contents</h3>
+      </th>
+    </tr>
+    <tr>
+      <td><a href="#Abstract">Abstract</a></td>
+    </tr>
+    <tr>
+      <td><a href="#Introduction">Introduction</a></td>
+    </tr>
+    <tr>
+      <td><a href="#Analysis and Discussion">Analysis and Discussion</a></td>
+    </tr>
+    <tr>
+      <td><a href="#References">Conclusion</a></td>
+    </tr>
+  </table>
+  <hr>
 
-    <hr>
+  <h2 style="font-family:calibri;"><b>Conference paper: Name of project</b></h2>
 
-    <h2 id= "Abstract">Abstract </h2>
-    <p class="ex1">
-    <pre>
+  <hr>
+
+  <h2 id="Abstract">Abstract </h2>
+  <p class="ex1">
+  <pre>
       This is the abstract of the project. <br>
       It provides a brief summary of the research, methodology, and key findings. <br>
       The abstract should be concise and informative, giving readers a clear 
       understanding of the project's purpose and significance.
     </pre>
-    </p>
+  </p>
 
-    <hr>
-    <h2 id= "Introduction">Introduction</h2>
-    <p class="ex1">
-    <pre>
+  <hr>
+  <h2 id="Introduction">Introduction</h2>
+  <p class="ex1">
+  <pre>
       'active learning blah blah ...'
     </pre>
-    </p>
+  </p>
 
-    <hr>
-    <h3 id= "analysis and discussion">Analysis and Discussion</h3>
-    <p class="ex1">
-     -> put the analysis and discussion text in this section. <br>
-    </p>
+  <hr>
+  <h3 id="analysis and discussion">Analysis and Discussion</h3>
+  <p class="ex1">
+    -> put the analysis and discussion text in this section. <br>
+  </p>
 
-    <hr>
-    <h3 id= "References">References</h3>
-    <p>
-    <pre>
+  <hr>
+  <h3 id="References">References</h3>
+  <p>
+  <pre>
       -> put the references text in this section. <br>
     </pre>
-    </p>
-    
-    <hr>
-    <h3>Javascript Interaction</h3>
-    <button id=colourButton">Click me</button>
-    <hr>
+  </p>
 
-    <input type="text" id="myInput" placeholder="Type something...">
-    <button id="Mybutton2">Show</button>
+  <hr>
+  <h3>interactive javascript</h3>
 
-    <hr>
-    <p id="numberDisplay">Click the button to generate a number between 1 & 10</p>
-    <button id="Randombutton">Generate the number</button>
+  <button id="colorButton">click me to change colour</button>
+  <hr>
 
+  <input type="text" id="inputField" placeholder="Type something...">
+  <button id="displayButton">Display Input</button>
 
-    <!-- interactive button section -->
-    
-     <script>
-        var button = document.getElementById("colorButton");
+  <hr>
 
-    // Function to change the button colour
+  <button id="generateButton"> Generate random number </button>
+  <p id="randomNumber"></p>
+
+  <script>
+    var colorBtn = document.getElementById("colorButton");
     function changeColor() {
-        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-        button.style.backgroundColor = randomColor;
+      var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      colorBtn.style.backgroundColor = randomColor;
     }
-    button.addEventListener("click", changeColor);
-
-    // Fixed capitalization here (showButton)
-        var showButton = document.getElementById("Mybutton2");
-        showButton.addEventListener("click", function() {
-        var textValue = document.getElementById("myInput").value;
-        alert(textValue);
-    });
-
-        var randomButton = document.getElementById("Randombutton");
-        randomButton.addEventListener("click", function() {
-        var randomNum = Math.floor(Math.random() * 10) + 1;
-        document.getElementById("numberDisplayinnerHTML").innerHTML = "Random number: " + randomNum; // Wait, check your element ID here too! Make sure it matches numberDisplay
-    });
+    colorBtn.addEventListener("click", changeColor);
 
 
-     </script>
-  </body>
+    var inputfield = document.getElementById("inputField");
+    var displayButton = document.getElementById("displayButton");
+
+    function showAlert() {
+      var inputValue = inputfield.value;
+      alert("You entered: " + inputValue);
+    }
+    displayButton.addEventListener("click", showAlert);
+
+    var genButton = document.getElementById("generateButton");
+    var paragraph = document.getElementById("randomNumber");
+
+    function generateRandomNumber() {
+      var randomNumber = Math.floor(Math.random() * 10) + 1;
+      paragraph.textContent = "random number: " + randomNumber;
+    }
+    genButton.addEventListener("click", generateRandomNumber);
+  </script>
+
+
+</body>
+
 </html>
