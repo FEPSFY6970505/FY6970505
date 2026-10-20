@@ -94,5 +94,46 @@
       -> put the references text in this section. <br>
     </pre>
     </p>
+    
+    <hr>
+    <h3>Javascript Interaction</h3>
+    <button id=colourButton">Click me</button>
+    <hr>
+
+    <input type="text" id="myInput" placeholder="Type something...">
+    <button id="Mybutton2">Show</button>
+
+    <hr>
+    <p id="numberDisplay">Click the button to generate a number between 1 & 10</p>
+    <button id="Randombutton">Generate the number</button>
+
+
+    <!-- interactive button section -->
+    
+     <script>
+        var button = document.getElementById("colorButton");
+
+    // Function to change the button colour
+    function changeColor() {
+        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        button.style.backgroundColor = randomColor;
+    }
+    button.addEventListener("click", changeColor);
+
+    // Fixed capitalization here (showButton)
+        var showButton = document.getElementById("Mybutton2");
+        showButton.addEventListener("click", function() {
+        var textValue = document.getElementById("myInput").value;
+        alert(textValue);
+    });
+
+        var randomButton = document.getElementById("Randombutton");
+        randomButton.addEventListener("click", function() {
+        var randomNum = Math.floor(Math.random() * 10) + 1;
+        document.getElementById("numberDisplayinnerHTML").innerHTML = "Random number: " + randomNum; // Wait, check your element ID here too! Make sure it matches numberDisplay
+    });
+
+
+     </script>
   </body>
 </html>
