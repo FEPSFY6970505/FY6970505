@@ -4,6 +4,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
   <!style for tables>
     <style>
       .mySlides {
@@ -81,17 +83,17 @@
 
   <hr>
   <h2 id="Introduction">Introduction</h2>
-  <p class="ex1">
-  <pre>
+  <pre id="Introduction_InText" class="ex1">
       'active learning blah blah ...'
-    </pre>
-  </p>
+  </pre>
 
   <hr>
-  <h3 id="analysis and discussion">Analysis and Discussion</h3>
-  <p class="ex1">
+  <h3 id="Analysis and Discussion">Analysis and Discussion</h3>
+  <p id="Analysis_and_Discussion_InText" class="ex1">
     -> put the analysis and discussion text in this section. <br>
   </p>
+
+  <div id="chart_div" style="width: 900px; height: 500px;"></div>
 
   <hr>
   <h3 id="References">References</h3>
@@ -100,6 +102,15 @@
       -> put the references text in this section. <br>
     </pre>
   </p>
+
+  <hr>
+  <p id="totalWordCount"></p>
+  <hr>
+
+  <div id="last-updated">Loading last update time...</div>
+  <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+  </button>
 
   <hr>
   <h3>Interactive javascript</h3>
@@ -123,7 +134,6 @@
     }
     colorBtn.addEventListener("click", changeColor);
 
-
     var inputfield = document.getElementById("inputField");
     var displayButton = document.getElementById("displayButton");
 
@@ -141,8 +151,70 @@
       paragraph.textContent = "random number: " + randomNumber;
     }
     genButton.addEventListener("click", generateRandomNumber);
+    async function getLastUpdatedTime() {
+      const username = 'nr0025';
+      const repo = 'FY0025';
+
+      const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+      try {
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+          }
+        });
+        if (!response.ok) {
+          throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+        }
+        const commits = await response.json();
+        if (commits && commits.length > 0) {
+          const lastCommitDate = new Date(commits[0].commit.committer.date);
+          document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+        } else {
+          document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+        }
+      } catch (error) {
+        console.error('Error fetching the last updated time:', error);
+        document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+      }
+    }
+
+    async function verifyLastUpdatedTime() {
+      document.getElementById('last-updated').innerText = 'Verifying...';
+      await getLastUpdatedTime();
+      alert("Last modified time has been successfully verified from GitHub API.");
+    }
+
+
+    // Word Count Logic
+    function displayWordCount(sectionId) {
+      const text = document.getElementById(sectionId).textContent;
+      const wordArray = text.trim().split(/\s+/);
+      return wordArray.length;
+    }
+
+    function displayTotalWordCount() {
+      const IntroductionCount = displayWordCount("Introduction_InText");
+      const AnalysisCount = displayWordCount("Analysis_InText");
+      const totalWordCount = IntroductionCount + AnalysisCount;
+      document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+    }
+
+
+    // Unified Window Load Initialization
+    window.onload = function () {
+      getLastUpdatedTime();
+      displayTotalWordCount();
+    };
+
+  </script>
+
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
   </script>
 
 
 </body>
+
 </html>
