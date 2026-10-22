@@ -152,8 +152,8 @@
     }
     genButton.addEventListener("click", generateRandomNumber);
     async function getLastUpdatedTime() {
-      const username = 'nr0025';
-      const repo = 'FY0025';
+      const username = 'FEPSFY6970505';
+      const repo = 'FY6970505';
 
       const url = `https://api.github.com/repos/${username}/${repo}/commits`;
       try {
@@ -169,20 +169,24 @@
         const commits = await response.json();
         if (commits && commits.length > 0) {
           const lastCommitDate = new Date(commits[0].commit.committer.date);
-          document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+          const formattedDate = lastCommitDate.toLocaleString('en-GB');
+          
+          document.getElementById('last-updated').innerText = `Last Modified Time: ${formattedDate}`;
+          return formattedDate;
         } else {
           document.getElementById('last-updated').innerText = 'No commits found in the repository.';
         }
       } catch (error) {
         console.error('Error fetching the last updated time:', error);
         document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+        return 'error fetching update time.'
       }
     }
 
     async function verifyLastUpdatedTime() {
       document.getElementById('last-updated').innerText = 'Verifying...';
-      await getLastUpdatedTime();
-      alert("Last modified time has been successfully verified from GitHub API.");
+      const dateString = await getLastUpdatedTime();
+      alert(`Last modified time has been successfully verified from GitHub API:\n${dateString}`);
     }
 
 
