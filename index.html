@@ -688,10 +688,27 @@
       }
     }
 
-    document.getElementById('verifyUpdated')
-      .addEventListener('click', getLastUpdatedTime);
 
-    getLastUpdatedTime();
+    document.getElementById('verifyUpdated')
+      .addEventListener('click', async function () {
+
+        // Show that verification is happening
+        const button = this;
+        button.textContent = "Verifying...";
+        button.disabled = true;
+
+        // Fetch the latest information from GitHub
+        await getLastUpdatedTime();
+
+        // Show confirmation
+        alert("Verification complete! The latest GitHub update information has been checked.");
+
+        // Reset the button
+        button.textContent = "Verify Last Modified Time";
+        button.disabled = false;
+
+      });
+
   </script>
 
 </body>
