@@ -1,389 +1,698 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <title>The Future of Power Supplies for Mobile Devices</title>
 
-  <!style for tables>
-    <style>
-      .mySlides {
-        display: none
+  <style>
+    :root {
+      --ink: #202d3d;
+      --blue: #21496c;
+      --light: #edf4f8;
+      --border: #d8e1e9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f7fa;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 940px;
+      margin: 25px auto;
+      padding: 32px 42px;
+      background: white;
+      box-shadow: 0 3px 20px #18314a12;
+      border-radius: 10px;
+    }
+
+    .banner {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 230px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      line-height: 1.3;
+      margin: 20px 0 10px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin: 24px 0 9px;
+      color: var(--blue);
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      margin: 20px 0 7px;
+      color: var(--blue);
+    }
+
+    p {
+      margin: 0 0 13px;
+    }
+
+    header .course {
+      font-weight: bold;
+      margin: 14px 0 0;
+    }
+
+    header .urn {
+      color: #556678;
+      font-size: .92rem;
+    }
+
+    nav {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 20px 0;
+    }
+
+    nav strong {
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 8px 20px;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      color: #155c91;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    section {
+      scroll-margin-top: 20px;
+    }
+
+    article section+section {
+      border-top: 1px solid var(--border);
+      margin-top: 18px;
+      padding-top: 4px;
+    }
+
+    .citation {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 16px 0 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .91rem;
+      min-width: 550px;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 9px 11px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead {
+      background: var(--blue);
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f1f6f9;
+    }
+
+    caption {
+      caption-side: bottom;
+      text-align: left;
+      font-size: .82rem;
+      color: #506073;
+      padding: 8px 0;
+    }
+
+    .references {
+      padding-left: 22px;
+      overflow-wrap: anywhere;
+    }
+
+    .references li {
+      margin: 0 0 11px;
+      scroll-margin-top: 20px;
+    }
+
+    .references li:target {
+      background: #fff4d9;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      margin-top: 24px;
+      color: #566579;
+      font-size: .88rem;
+    }
+
+    .tools {
+      margin-top: 22px;
+      padding: 16px;
+      background: #f7fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .tools h2 {
+      margin-top: 0;
+    }
+
+    button {
+      background: var(--blue);
+      color: white;
+      border: 0;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px 5px 5px 0;
+    }
+
+    .tools input {
+      max-width: 100%;
+      padding: 8px;
+      border: 1px solid #b5c3ce;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 650px) {
+      .page {
+        margin: 0;
+        padding: 20px 17px;
+        border-radius: 0;
       }
 
-      body {
-        background-color: #FFFFFF;
-        margin-left: 50px;
+      h1 {
+        font-size: 1.55rem;
       }
 
-      table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 30%
+      nav ul {
+        display: block;
       }
 
-      td,
-      th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
+      nav li {
+        margin: 3px 0;
       }
-
-      tr:nth-child(even) {
-        background-color: #dddddd;
-      }
-
-      p.ex1 {
-        margin-left: 250px;
-      }
-    </style>
+    }
+  </style>
 </head>
 
 <body>
-  <img src="Banner.png" alt="Banner" width="1200" height="300">
-  <h1>ENG0018 Computer Laboratory 2026/27</h1>
-  <h2>Student URN: 6970505</h2>
+  <main class="page" id="top">
 
-  <!-- table of contents-->
-  <table>
-    <tr>
-      <th>
-        <h3>Table of Contents</h3>
-      </th>
-    </tr>
-    <tr>
-      <td><a href="#Abstract">Abstract</a></td>
-    </tr>
-    <tr>
-      <td><a href="#Introduction">Introduction</a></td>
-    </tr>
-    <tr>
-      <td><a href="#Analysis and Discussion">Analysis and Discussion</a></td>
-    </tr>
-    <tr>
-      <td><a href="#Conclusion">Conclusion</a></td>
-    </tr>
-    <tr>
-      <td><a href="#References">References</a></td>
-    </tr>
-  </table>
-  <hr>
+    <header>
+      <img class="banner" src="Banner.png" alt="Banner" onerror="this.style.display='none'">
 
-  <h2 style="font-family:calibri;"><b>Conference paper: Name of project</b></h2>
+      <p class="course">ENG0018 Computer Laboratory 2026/27</p>
+      <p class="urn">Student URN: 6970505</p>
 
-  <hr>
+      <h1>
+        The Future of Power Supplies for Mobile Devices:
+        Solid-State and Semi-Solid-State Batteries
+      </h1>
+    </header>
 
-  <h2 id="Abstract">Abstract </h2>
-  <p class="ex1">
-  <pre>
-    As mobile devices become more powerful, battery life, charging speed and safety are becoming increasingly important. 
-    These are some of the main factor’s consumers consider when purchasing any new device, but in modern day devices – especially mobile devices – still use lithium-ion batteries, which faces limitations like degradation. 
-    This article therefore explores how solid-state and semi-solid-state batteries could improve energy storage, there benefits for everyday users, whilst 
-    considering the issues with affordability and reliability compared to modern -day batteries.
-    </pre>
-  </p>
+    <nav aria-label="Table of contents">
+      <strong>Table of Contents</strong>
+      <ul>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#analysis">Analysis and Discussion</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </nav>
 
-  <hr>
-  <h2 id="Introduction">Introduction</h2>
-  <pre id="Introduction_InText" class="ex1">
-    From attending online lectures to working on a laptop while travelling, people depend on mobile devices throughout the day.
-    Yet increased usage on demanding apps and processing power can drain batteries quickly. Manufacturers therefore need to store more energy without making devices less portable or heavier.
-    Conventional lithium-ion batteries move lithium ions between electrodes through a liquid electrolyte. 
-    So, as an alternative, the solid-state batteries replace this liquid with a solid material, while semi-solid-state batteries retain some gel-like components.  
-    However, both technologies are still being developed or enhanced and neither guarantee better performance in every situation.
+    <article id="article-content">
 
-  </pre>
+      <section id="abstract">
+        <h2>Abstract</h2>
 
-  <hr>
-  <h3 id="Analysis and Discussion">Analysis and Discussion</h3>
-  <p id="Analysis_and_Discussion_InText" class="ex1">
-    <b> 2.1 Moving towards Solid-state Technology </b>
-    Lithium-ion batteries are widely used because their manufacturing processes are established and relatively
-    economical.
-    Fully solid-state batteries can require new materials, precise manufacturing and reliable contact between their
-    components.
-    This makes large-scale production extremely difficult (Janek and Zeier, 2023). <br>
-    But semi- solid designs could offer a more reliable performance.
-    By keeping some liquid or gel-like substance, they can avoid difficulties associated with completely solid
-    electrolytes- like gaps between the materials inside the battery.
-    However, semi-solid and fully solid-state batteries shouldn’t be treated as ‘identical’ technologies, since their
-    designs and performance can vary.
-    <br>
+        <p>
+          As mobile devices become more powerful, battery life,
+          charging speed and safety are increasingly important.
+          These are key factors consumers consider when buying a
+          device. However, most mobile devices still rely on
+          lithium-ion batteries, which face limitations such as
+          degradation. This article explores how solid-state and
+          semi-solid-state batteries could improve energy storage
+          and benefit everyday users, while considering their
+          affordability and reliability.
+        </p>
+      </section>
 
-    <b> 2.2 Safety and Thermal Runaway </b>
-    Safety is a major contribution to why researchers are interested in solid-state batteries.
-    In conventional lithium-ion cells, damage or overheating or overcharging can lead to thermal runaway; a chain
-    reaction which ultimately means a battery produces heat faster than it is escaping.
-    So, a flammable liquid electrolyte can make a fire risk even more severe. <br>
+      <section id="introduction">
+        <h2>Introduction</h2>
 
-    Replacing the liquids with suitable solid-state electrolytes can significantly reduce some fire risks (Faraday
-    Institution, 2020).
-    However, solid-state batteries are not automatically fireproof.
-    Lithium dendrites, tiny, needle-like metal deposits, can still form and cause short circuit.
-    Researchers have demonstrated that this remains as an important problem (Liu et al., 2025).
-    <br>
+        <p>
+          From attending online lectures to working on a laptop
+          while travelling, people depend on mobile devices
+          throughout the day. Yet demanding apps and increased
+          processing power can drain batteries quickly.
+          Manufacturers therefore need to store more energy
+          without making devices heavier.
+        </p>
 
-    <b> 2.3 Energy Density and Everyday Performance </b>
-    Energy density means the amount of energy stored for a given battery weight or volume.
-    Higher energy density matter especially in portable devices, where space is limited.
-    Some solid-state designs could use lithium- metal anodes, which could potentially
-    store more energy than conventional graphite-based cells (Faraday Institution, 2020). <br>
+        <p>
+          Conventional lithium-ion batteries move lithium ions
+          between electrodes through a liquid electrolyte.
+          Solid-state batteries replace this liquid with a solid
+          material, while semi-solid batteries retain some liquid
+          or gel-like components. Both alternatives are still
+          developing, and neither guarantees better performance
+          in every situation.
+        </p>
+      </section>
 
-  <table class="battery-table">
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th>Lithium-ion</th>
-        <th>Semi-solid</th>
-        <th>Solid-state</th>
-      </tr>
-    </thead>
+      <section id="analysis">
+        <h2>Analysis and Discussion</h2>
 
-    <tbody>
-      <tr>
-        <td>Electrolyte</td>
-        <td>Liquid</td>
-        <td>Gel or mixed</td>
-        <td>Solid</td>
-      </tr>
+        <h3>2.1 Moving Towards Solid-State Technology</h3>
 
-      <tr>
-        <td>Safety</td>
-        <td>Flammable liquid presents risks</td>
-        <td>May reduce some risks</td>
-        <td>Potentially safer, depending on materials</td>
-      </tr>
+        <p>
+          Lithium-ion batteries are widely used because their
+          manufacturing processes are established and relatively
+          economical. Fully solid-state batteries may require new
+          materials, precise manufacturing and reliable contact
+          between components. This makes large-scale production
+          difficult
+          <a class="citation" href="#ref-janek">
+            (Janek and Zeier, 2023)
+          </a>.
+        </p>
 
-      <tr>
-        <td>Energy storage</td>
-        <td>Established performance</td>
-        <td>Potential improvements</td>
-        <td>Potentially higher capacity</td>
-      </tr>
+        <p>
+          Semi-solid designs could offer a more practical
+          transition. Their liquid or gel-like components can
+          help fill tiny gaps between battery materials, improving
+          contact. However, semi-solid and fully solid-state
+          batteries differ in design and performance. Industry
+          assessments also highlight the challenges of scaling
+          new battery technologies
+          <a class="citation" href="#ref-iea">
+            (International Energy Agency, 2026)
+          </a>.
+        </p>
 
-      <tr>
-        <td>Battery lifespan</td>
-        <td>Gradual degradation</td>
-        <td>Depends on design</td>
-        <td>Potential for longer life</td>
-      </tr>
+        <h3>2.2 Safety and Thermal Runaway</h3>
 
-      <tr>
-        <td>Manufacturing</td>
-        <td>Established and affordable</td>
-        <td>May use existing methods</td>
-        <td>More complex and costly</td>
-      </tr>
-    </tbody>
-  </table>
+        <p>
+          Safety is a major reason researchers are interested in
+          solid-state batteries. In conventional lithium-ion cells,
+          damage, overheating or overcharging can trigger thermal
+          runaway: a chain reaction where the battery generates
+          heat faster than it escapes. Flammable liquid electrolytes
+          can make resulting fires more severe.
+        </p>
 
-  <p class="table-caption">
-    Table 1: General comparison of conventional lithium-ion,
-    semi-solid and solid-state batteries. Adapted from
-    Faraday Institution (2020) and Janek and Zeier (2023).
-    Actual performance varies between battery designs.
-  </p>
+        <p>
+          Replacing these liquids with suitable solid electrolytes
+          could reduce some fire risks
+          <a class="citation" href="#ref-faraday">
+            (Faraday Institution, 2020)
+          </a>.
+          However, solid-state batteries are not automatically
+          fireproof. Lithium dendrites, tiny needle-like metal
+          deposits, can still form and cause short circuits
+          <a class="citation" href="#ref-liu">
+            (Liu et al., 2025)
+          </a>.
+        </p>
 
-  <br>
-   For example, imagine two laptops with batteries of the same size and weight, but the one storing more
-   usable energy could last longer between charges, without becoming heavier.
-   Alternatively, a manufacturer could make a smartphone thinner while keeping a similar battery life.
-   This would be useful for everyday students or professionals who use their devices throughout the day without
-   always having to access a charger. <br>
+        <h3>2.3 Energy Density and Everyday Performance</h3>
 
-   But these are the possibilities, not promises: actual battery life depends on the screen, processor and the main
-   software.
-   Solid-state technology might also support faster charging, but charging speed depends on ion movement, resistance,
-   temperature and the design
-   of the charging system. It cannot be assumed that every solid-sate battery will charge faster (Janek and Zeier, 2023).
-  <br>
+        <p>
+          Energy density means how much energy a battery stores
+          for its weight or volume. This matters in portable
+          devices where space is limited. Some solid-state designs
+          could use lithium-metal anodes, potentially storing more
+          energy than conventional graphite-based cells
+          <a class="citation" href="#ref-faraday">
+            (Faraday Institution, 2020)
+          </a>.
+        </p>
 
-  <b> 2.4 Lifespan and Environmental Impact </b>
-   Repeated charging gradually reduces battery capacity.
-   Some solid-state designs may slow degradation processes, potentially allowing devices to remain useful for longer.
-   For students or people who rely on laptops daily, this could mean fewer battery replacements and lower costs over
-   time.
-  <br>
-   However, a longer lifespan isn’t guaranteed.
-   Environmental impacts can depend on the energy and materials used in manufacturing, as well as whether batteries can
-   be repaired or recycled sustainably – which can
-   lead to potential E-waste through multiple trials.
-  <br>
+        <div class="table-wrap">
+          <table>
+            <caption>
+              Table 1: General comparison of battery technologies,
+              based on
+              <a href="#ref-faraday">Faraday Institution (2020)</a>
+              and
+              <a href="#ref-janek">Janek and Zeier (2023)</a>.
+              Performance varies by design.
+            </caption>
 
-  <b> 2.5 Engineering and the Challenges </b>
-   An important engineering challenge is maintaining contact between the electrodes and solid electrolyte.
-   Battery materials expand and contract in different conditions and during use, which can cause internal issues likes
-   gaps, resistance and reduced performance (Janek and Zeier, 2023).
-  <br>
-   Manufacturers also need to demonstrate consistent safety, durability and reasonable costs across millions of cells
-   throughout the trial and pitching process.
-   Battery management systems will still be needed to monitor voltage, temperature and charging.
-   Therefore, even if research is advancing, successful laboratory results do not automatically mean a new piece of
-   technology
-   is ready to be utilised within mobile devices or laptops.
-  <br>
-  </p>
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Lithium-ion</th>
+                <th scope="col">Semi-solid</th>
+                <th scope="col">Solid-state</th>
+              </tr>
+            </thead>
 
-  <div id="chart_div" style="width: 900px; height: 500px;"></div>
+            <tbody>
+              <tr>
+                <th scope="row">Electrolyte</th>
+                <td>Liquid</td>
+                <td>Liquid/gel mixture</td>
+                <td>Solid</td>
+              </tr>
 
+              <tr>
+                <th scope="row">Safety</th>
+                <td>Flammable liquid presents risks</td>
+                <td>Risks vary by design</td>
+                <td>Potentially safer</td>
+              </tr>
 
-  <hr>
-  <h3 id="Conclusion">Conclusion</h3>
-  <p id="Analysis_and_Discussion_InText" class="ex1">
-   Solid state and semi-solid-state batteries could improve future mobile devices through safer designs and potentially
-   longer lifespans.
-   For users, this might mean lighter laptops, longer-lasting smartphones and less frequent charging.
-    <br>
-   However, technical difficulties like production costs, E-waste from trials and uncertain long-term durability remain
-   as significant obstacles.
-   Semi-solid batteries may help as a supporting bridge between these lithium-ion batteries whilst solid-state designs
-   are still being developed.
-   Ultimately, their success depends on providing reliable improvements at a price consumers and manufactures find
-   affordable.
+              <tr>
+                <th scope="row">Energy storage</th>
+                <td>Established performance</td>
+                <td>Potential improvements</td>
+                <td>Potentially higher</td>
+              </tr>
 
+              <tr>
+                <th scope="row">Lifespan</th>
+                <td>Gradual degradation</td>
+                <td>Depends on design</td>
+                <td>Potential improvements</td>
+              </tr>
 
-  </p>
+              <tr>
+                <th scope="row">Manufacturing</th>
+                <td>Established</td>
+                <td>May adapt existing methods</td>
+                <td>More complex</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-  <hr>
-  <h3 id="References">References</h3>
-  <p>
+        <p>
+          For example, two laptops could have batteries of the
+          same size and weight, but the one storing more usable
+          energy could last longer between charges. Similarly,
+          manufacturers could make smartphones thinner without
+          sacrificing battery life. This could benefit students
+          and professionals who use their devices throughout
+          the day.
+        </p>
 
-    Faraday Institution (2020) Solid-State Batteries: Faraday Insights 5.
-    Available at:Available at:
-    <a href="https://faraday.ac.uk/wp-content/uploads/2020/04/Faraday-Insights-5_Updated.pdf" target="_blank">
-      https://faraday.ac.uk/wp-content/uploads/2020/04/Faraday-Insights-5_Updated.pdf
-    </a>
-    <br>
-    Janek, J. and Zeier, W.G. (2023) 'Challenges in speeding up solid-state battery development', Nature Energy, 8, pp.
-    230–240.
-    Available at: <a href="https://doi.org/10.1038/s41560-023-01208-9" target="_blank">
-      https://doi.org/10.1038/s41560-023-01208-9
-    </a>
-    <br>
-    Liu, H. et al. (2025) 'Dendrite formation in solid-state batteries arising from lithium plating and electrolyte
-    reduction', Nature Materials.
-    Available at:<a href="https://doi.org/10.1038/s41563-024-02094-6" target="_blank">
-      https://doi.org/10.1038/s41563-024-02094-6
-    </a>
-    <br>
-  </p>
+        <p>
+          These are possibilities, not promises: actual battery
+          life also depends on the screen, processor and software.
+          Solid-state technology might support faster charging,
+          but charging speed depends on ion movement, resistance,
+          temperature and charger design
+          <a class="citation" href="#ref-janek">
+            (Janek and Zeier, 2023)
+          </a>.
+        </p>
 
-  <hr>
-  <p id="totalWordCount"></p>
-  <hr>
+        <h3>2.4 Lifespan and Environmental Impact</h3>
 
-  <div id="last-updated">Loading last update time...</div>
-  <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    Verify Last Modified Time
-  </button>
+        <p>
+          Repeated charging gradually reduces battery capacity.
+          Some solid-state designs may slow certain degradation
+          processes, potentially allowing devices to remain
+          useful for longer. This could mean fewer replacements
+          and lower costs for people who rely on laptops daily.
+        </p>
 
-  <hr>
-  <h3>Interactive javascript</h3>
+        <p>
+          However, longer lifespans are not guaranteed.
+          Environmental impacts also depend on manufacturing
+          energy, raw materials and whether batteries can be
+          repaired or recycled. Newer technology is not
+          automatically more sustainable.
+        </p>
 
-  <button id="colorButton">click me to change colour</button>
-  <hr>
+        <h3>2.5 Engineering Challenges</h3>
 
-  <input type="text" id="inputField" placeholder="Type something...">
-  <button id="displayButton">Display Input</button>
+        <p>
+          An important challenge is maintaining contact between
+          electrodes and solid electrolytes. Battery materials
+          expand and contract during use, which can create tiny
+          gaps, increase resistance and reduce performance
+          <a class="citation" href="#ref-janek">
+            (Janek and Zeier, 2023)
+          </a>.
+        </p>
 
-  <hr>
+        <p>
+          Manufacturers must demonstrate consistent safety,
+          durability and affordable production. Battery management
+          systems will still monitor voltage, temperature and
+          charging. Successful laboratory results do not
+          automatically mean a battery is ready for everyday
+          mobile devices.
+        </p>
+      </section>
 
-  <button id="generateButton"> Generate random number </button>
-  <p id="randomNumber"></p>
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+
+        <p>
+          Solid-state and semi-solid-state batteries could improve
+          future mobile devices through safer designs, higher
+          energy storage and potentially longer lifespans.
+          For users, this might mean lighter laptops, longer-lasting
+          smartphones and less frequent charging.
+        </p>
+
+        <p>
+          However, manufacturing costs and uncertain durability
+          remain significant obstacles. Semi-solid batteries may
+          offer a bridge while fully solid-state designs develop.
+          Ultimately, success depends on delivering reliable
+          improvements at an affordable price.
+        </p>
+      </section>
+
+      <section id="references">
+        <h2>References</h2>
+
+        <ol class="references">
+
+          <li id="ref-faraday">
+            Faraday Institution (2020)
+            <em>Solid-State Batteries: Faraday Insights 5</em>.
+            Available at:
+            <a href="https://faraday.ac.uk/wp-content/uploads/2020/04/Faraday-Insights-5_Updated.pdf" target="_blank"
+              rel="noopener noreferrer">
+              Faraday Insights 5 (PDF)
+            </a>
+            (Accessed: 5 November 2026).
+          </li>
+
+          <li id="ref-iea">
+            International Energy Agency (2026)
+            <em>Global EV Outlook 2026: Electric vehicle batteries</em>.
+            Available at:
+            <a href="https://www.iea.org/reports/global-ev-outlook-2026/electric-vehicle-batteries" target="_blank"
+              rel="noopener noreferrer">
+              IEA battery report
+            </a>
+            (Accessed: 5 November 2026).
+          </li>
+
+          <li id="ref-janek">
+            Janek, J. and Zeier, W.G. (2023)
+            'Challenges in speeding up solid-state battery
+            development',
+            <em>Nature Energy</em>, 8, pp. 230–240.
+            Available at:
+            <a href="https://doi.org/10.1038/s41560-023-01208-9" target="_blank" rel="noopener noreferrer">
+              https://doi.org/10.1038/s41560-023-01208-9
+            </a>.
+          </li>
+
+          <li id="ref-liu">
+            Liu, H. <em>et al.</em> (2025)
+            'Dendrite formation in solid-state batteries arising
+            from lithium plating and electrolyte reduction',
+            <em>Nature Materials</em>.
+            Available at:
+            <a href="https://doi.org/10.1038/s41563-024-02094-6" target="_blank" rel="noopener noreferrer">
+              https://doi.org/10.1038/s41563-024-02094-6
+            </a>.
+          </li>
+
+        </ol>
+      </section>
+
+    </article>
+
+    <footer>
+      <p id="totalWordCount" aria-live="polite"></p>
+
+      <p id="last-updated">
+        Checking last update time...
+      </p>
+
+      <button type="button" id="verifyUpdated">
+        Verify Last Modified Time
+      </button>
+
+      <p><a href="#top">Back to top</a></p>
+    </footer>
+
+    <section class="tools" aria-label="Interactive JavaScript exercises">
+      <h2>Interactive JavaScript</h2>
+
+      <button type="button" id="colorButton">
+        Click to change colour
+      </button>
+
+      <div>
+        <input id="inputField" type="text" placeholder="Type something...">
+
+        <button type="button" id="displayButton">
+          Display input
+        </button>
+
+        <span id="inputResult" aria-live="polite"></span>
+      </div>
+
+      <button type="button" id="generateButton">
+        Generate random number
+      </button>
+
+      <span id="randomNumber" aria-live="polite"></span>
+    </section>
+
+  </main>
 
   <script>
-    var colorBtn = document.getElementById("colorButton");
-    function changeColor() {
-      var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-      colorBtn.style.backgroundColor = randomColor;
-    }
-    colorBtn.addEventListener("click", changeColor);
+    'use strict';
 
-    var inputfield = document.getElementById("inputField");
-    var displayButton = document.getElementById("displayButton");
+    // Word count includes headings, table and references
+    const article = document.getElementById('article-content');
 
-    function showAlert() {
-      var inputValue = inputfield.value;
-      alert("You entered: " + inputValue);
-    }
-    displayButton.addEventListener("click", showAlert);
+    const words = (article.innerText || article.textContent)
+      .trim()
+      .match(/\S+/g) || [];
 
-    var genButton = document.getElementById("generateButton");
-    var paragraph = document.getElementById("randomNumber");
+    document.getElementById('totalWordCount').textContent =
+      `Article word count (including headings, table and references): ${words.length}`;
 
-    function generateRandomNumber() {
-      var randomNumber = Math.floor(Math.random() * 10) + 1;
-      paragraph.textContent = "random number: " + randomNumber;
-    }
-    genButton.addEventListener("click", generateRandomNumber);
+
+    // Colour-changing button
+    document.getElementById('colorButton')
+      .addEventListener('click', e => {
+        const randomColor = '#' +
+          Math.floor(Math.random() * 16777215)
+            .toString(16)
+            .padStart(6, '0');
+
+        e.currentTarget.style.backgroundColor = randomColor;
+      });
+
+
+    // Display input
+    document.getElementById('displayButton')
+      .addEventListener('click', () => {
+        document.getElementById('inputResult').textContent =
+          document.getElementById('inputField').value;
+      });
+
+
+    // Generate random number
+    document.getElementById('generateButton')
+      .addEventListener('click', () => {
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+        document.getElementById('randomNumber').textContent =
+          'Random number: ' + randomNumber;
+      });
+
+
+    // GitHub last modified time
     async function getLastUpdatedTime() {
-      const username = 'FEPSFY6970505';
-      const repo = 'FY6970505';
+      const output = document.getElementById('last-updated');
 
-      const url = `https://api.github.com/repos/${username}/${repo}/commits`;
       try {
-        const response = await fetch(url, {
-          method: 'GET',
-          headers: {
-            'Accept': 'application/vnd.github.v3+json',
+        const response = await fetch(
+          'https://api.github.com/repos/FEPSFY6970505/FY6970505/commits?per_page=1',
+          {
+            headers: {
+              Accept: 'application/vnd.github+json'
+            }
           }
-        });
-        if (!response.ok) {
-          throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-        }
-        const commits = await response.json();
-        if (commits && commits.length > 0) {
-          const lastCommitDate = new Date(commits[0].commit.committer.date);
-          const formattedDate = lastCommitDate.toLocaleString('en-GB');
+        );
 
-          document.getElementById('last-updated').innerText = `Last Modified Time: ${formattedDate}`;
-          return formattedDate;
-        } else {
-          document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+        if (!response.ok) {
+          throw new Error('HTTP ' + response.status);
         }
+
+        const commits = await response.json();
+
+        if (!commits.length) {
+          output.textContent = 'No commits found.';
+          return;
+        }
+
+        const lastCommitDate =
+          new Date(commits[0].commit.committer.date);
+
+        output.textContent =
+          'Last modified on GitHub: ' +
+          lastCommitDate.toLocaleString('en-GB');
+
       } catch (error) {
-        console.error('Error fetching the last updated time:', error);
-        document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
-        return 'error fetching update time.'
+        output.textContent =
+          'GitHub update time unavailable. Check repository details or try again.';
+
+        console.error(error);
       }
     }
 
-    async function verifyLastUpdatedTime() {
-      document.getElementById('last-updated').innerText = 'Verifying...';
-      const dateString = await getLastUpdatedTime();
-      alert(`Last modified time has been successfully verified from GitHub API:\n${dateString}`);
-    }
+    document.getElementById('verifyUpdated')
+      .addEventListener('click', getLastUpdatedTime);
 
-
-    // Word Count Logic
-    function displayWordCount(sectionId) {
-      const text = document.getElementById(sectionId).textContent;
-      const wordArray = text.trim().split(/\s+/);
-      return wordArray.length;
-    }
-
-    function displayTotalWordCount() {
-      const IntroductionCount = displayWordCount("Introduction_InText");
-      const AnalysisCount = displayWordCount("Analysis_InText");
-      const totalWordCount = IntroductionCount + AnalysisCount;
-      document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-    }
-
-
-    // unified window load initialisation
-    window.onload = function () {
-      getLastUpdatedTime();
-      displayTotalWordCount();
-    };
-
+    getLastUpdatedTime();
   </script>
-
-  <script type="text/javascript">
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
-  </script>
-
 
 </body>
 
